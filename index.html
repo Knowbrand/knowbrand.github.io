@@ -7,18 +7,44 @@
 
 <style>
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
-background:url("https://images.unsplash.com/photo-1523381294911-8d3cead13475") center/cover no-repeat;
-height:100vh;
 color:white;
-display:flex;
-flex-direction:column;
 }
 
-.main{
-flex:1;
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:black;
+padding:15px;
+text-align:center;
+z-index:1000;
+}
+
+nav a{
+color:white;
+margin:0 20px;
+text-decoration:none;
+font-size:16px;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+/* HERO SECTION */
+
+.hero{
+height:100vh;
+background:url("https://images.unsplash.com/photo-1523381294911-8d3cead13475") center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -37,11 +63,6 @@ letter-spacing:4px;
 margin-bottom:10px;
 }
 
-p{
-font-size:20px;
-opacity:0.9;
-}
-
 button{
 margin-top:25px;
 padding:12px 35px;
@@ -57,22 +78,56 @@ button:hover{
 background:#eaeaea;
 }
 
-footer{
-background:black;
-color:white;
-padding:25px;
+/* ABOUT SECTION */
+
+.about{
+background:#111;
+padding:100px 20px;
 text-align:center;
-font-size:14px;
 }
 
-footer a{
+.about h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.about p{
+max-width:600px;
+margin:auto;
+font-size:18px;
+opacity:0.9;
+}
+
+/* CONTACT SECTION */
+
+.contact{
+background:#222;
+padding:100px 20px;
+text-align:center;
+}
+
+.contact h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.contact a{
 color:white;
-margin:0 15px;
+font-size:20px;
 text-decoration:none;
 }
 
-footer a:hover{
+.contact a:hover{
 text-decoration:underline;
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+padding:25px;
+text-align:center;
+font-size:14px;
 }
 
 </style>
@@ -87,7 +142,13 @@ alert("KnowBrand drop coming soon 🚀");
 
 <body>
 
-<div class="main">
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
 
 <div class="overlay">
 
@@ -99,13 +160,31 @@ alert("KnowBrand drop coming soon 🚀");
 
 </div>
 
-</div>
+</section>
+
+<section class="about" id="about">
+
+<h2>About KnowBrand</h2>
+
+<p>
+KnowBrand is a vision-driven clothing brand focused on identity, confidence,
+and street culture. Built for people who understand their value and express
+their individuality through style.
+</p>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact Us</h2>
+
+<p>Reach out to us directly</p>
+
+<a href="tel:9167878131">📞 9167878131</a>
+
+</section>
 
 <footer>
-
-<a href="#">About</a>
-<a href="tel:9167878131">Contact</a>
-<a href="#">Instagram</a>
 
 <p>© 2026 KnowBrand</p>
 
