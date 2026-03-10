@@ -242,20 +242,28 @@ h1{
 font-size:32px;
 }
 
+/* HERO MOBILE */
+
 #home{
 
-height:auto;
+margin-top:60px;
+
+height:56.25vw;
 
 background:
 linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
 url("https://i.pinimg.com/736x/46/52/65/46526532b6bf8d69041729adab9efcb7.jpg");
 
-background-size:contain;
-background-position:center top;
+background-size:cover;
+background-position:center;
 background-repeat:no-repeat;
 
-padding-top:320px;
-padding-bottom:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+padding:20px;
 
 }
 
@@ -263,6 +271,8 @@ padding-bottom:60px;
 background:rgba(255,255,255,0.08);
 padding:20px;
 }
+
+/* DROP GRID MOBILE */
 
 .drop-container{
 grid-template-columns:1fr 1fr;
@@ -278,170 +288,3 @@ grid-template-columns:1fr 1fr;
 }
 
 }
-
-</style>
-
-</head>
-
-<body>
-
-<nav>
-
-<a href="#home" class="logo">KNOWBRAND</a>
-
-<div class="navlinks">
-<a href="#home">Home</a>
-<a href="#drop">Drop</a>
-<a href="#contact">Contact</a>
-</div>
-
-</nav>
-
-<section id="home">
-
-<div class="hero-box">
-
-<h1>Knowbrand</h1>
-
-<p>
-A modern clothing brand built around identity and creativity.
-</p>
-
-<button onclick="comingSoon()">
-Coming Soon
-</button>
-
-</div>
-
-</section>
-
-<section id="drop">
-
-<h1>DROP 01</h1>
-
-<p>First pieces from the Knowbrand collection.</p>
-
-<div class="drop-container">
-
-<div class="product-card">
-<img src="https://i.pinimg.com/736x/5f/9b/4c/5f9b4c3f43a2e2449c0923ff1ec8d976.jpg">
-<div class="product-overlay">
-<div class="product-name">Jackets</div>
-</div>
-</div>
-
-<div class="product-card">
-<img src="https://i.pinimg.com/736x/b4/60/08/b46008f02b6a9dbf4229d0fe37a7a9d4.jpg">
-<div class="product-overlay">
-<div class="product-name">Button Ups</div>
-</div>
-</div>
-
-<div class="product-card">
-<img src="https://i.pinimg.com/736x/73/f3/64/73f36452629444a51debe000c986426a.jpg">
-<div class="product-overlay">
-<div class="product-name">Pants</div>
-</div>
-</div>
-
-<div class="product-card">
-<img src="https://i.pinimg.com/1200x/cc/99/82/cc9982fcc5bd20b2a30a488482a2c659.jpg">
-<div class="product-overlay">
-<div class="product-name">Dresses</div>
-</div>
-</div>
-
-</div>
-
-</section>
-
-<section id="instagram">
-
-<h1>Instagram</h1>
-
-<div class="insta-grid">
-
-<div class="product-card">
-<img src="https://i.pinimg.com/736x/5f/9b/4c/5f9b4c3f43a2e2449c0923ff1ec8d976.jpg">
-</div>
-
-<div class="product-card">
-<img src="https://i.pinimg.com/736x/b4/60/08/b46008f02b6a9dbf4229d0fe37a7a9d4.jpg">
-</div>
-
-<div class="product-card">
-<img src="https://i.pinimg.com/736x/73/f3/64/73f36452629444a51debe000c986426a.jpg">
-</div>
-
-</div>
-
-</section>
-
-<section id="about">
-
-<h1>About</h1>
-
-<p>
-Knowbrand is a modern clothing label focused on individuality and creative identity.
-Built for people who want their clothing to express more than just fashion.
-</p>
-
-</section>
-
-<section id="contact">
-
-<h1>Contact</h1>
-
-<p>Reach out for collaborations or inquiries.</p>
-
-<p>
-<a href="tel:9167878131">Call — 9167878131</a>
-</p>
-
-<p>
-<a href="mailto:knowbrandcare@knowbrand.com">
-Email — knowbrandcare@knowbrand.com
-</a>
-</p>
-
-</section>
-
-<footer>
-
-<p>© 2026 Knowbrand</p>
-
-<p>
-<a href="#drop">Drop</a> |
-<a href="#contact">Contact</a>
-</p>
-
-</footer>
-
-<script>
-
-/* NAVBAR BLUR */
-
-window.addEventListener("scroll", function(){
-
-const nav = document.querySelector("nav");
-
-if(window.scrollY > 50){
-nav.classList.add("scrolled");
-}else{
-nav.classList.remove("scrolled");
-}
-
-});
-
-/* COMING SOON ALERT */
-
-function comingSoon(){
-
-alert("Knowbrand Drop 01 is coming soon.\n\nWe're building something special. Stay tuned.");
-
-}
-
-</script>
-
-</body>
-</html>
