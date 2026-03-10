@@ -57,7 +57,7 @@ font-size:14px;
 position:relative;
 }
 
-/* PREMIUM NAV HOVER */
+/* NAVBAR HOVER */
 
 .navlinks a::after{
 content:"";
@@ -77,11 +77,12 @@ width:100%;
 /* HERO DESKTOP */
 
 #home{
+
 height:90vh;
 
 background:
 linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.55)),
-url("https://i.pinimg.com/736x/46/52/65/46526532b6bf8d69041729adab9efcb7.jpg");
+url("https://images.unsplash.com/photo-1520975922284-9bfb8b9f7d19");
 
 background-size:cover;
 background-position:center;
@@ -90,6 +91,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
+
 padding:20px;
 }
 
@@ -118,7 +120,7 @@ cursor:pointer;
 font-weight:600;
 }
 
-/* SECTIONS */
+/* SECTION */
 
 .section{
 padding:80px 60px;
@@ -129,7 +131,7 @@ margin-bottom:30px;
 font-size:24px;
 }
 
-/* DROP GRID DESKTOP */
+/* DROP GRID */
 
 .drop-container{
 display:grid;
@@ -183,17 +185,21 @@ gap:10px;
 width:100%;
 height:220px;
 object-fit:cover;
+transition:0.5s;
+cursor:pointer;
 }
 
-/* ABOUT + CONTACT MERGED */
+/* INSTAGRAM HOVER ZOOM */
+
+.insta-grid img:hover{
+transform:scale(1.08);
+}
+
+/* ABOUT + CONTACT */
 
 .about-contact{
 padding:80px 60px;
 max-width:800px;
-}
-
-.about-contact h2{
-margin-bottom:20px;
 }
 
 .contact-info{
@@ -211,6 +217,19 @@ background:black;
 padding:30px;
 text-align:center;
 border-top:1px solid rgba(255,255,255,0.1);
+}
+
+/* SCROLL ANIMATION */
+
+.fade-section{
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+
+.fade-section.visible{
+opacity:1;
+transform:translateY(0);
 }
 
 /* MOBILE */
@@ -278,9 +297,32 @@ padding:60px 20px;
 </style>
 
 <script>
+
+/* COMING SOON BUTTON */
+
 function comingSoon(){
 alert("Knowbrand is launching soon. Stay tuned.");
 }
+
+/* SCROLL FADE ANIMATION */
+
+window.addEventListener("scroll", function(){
+
+const sections=document.querySelectorAll(".fade-section");
+
+sections.forEach(section=>{
+
+const position=section.getBoundingClientRect().top;
+const screen=window.innerHeight;
+
+if(position < screen - 100){
+section.classList.add("visible");
+}
+
+});
+
+});
+
 </script>
 
 </head>
@@ -309,7 +351,7 @@ alert("Knowbrand is launching soon. Stay tuned.");
 
 </section>
 
-<section class="section">
+<section class="section fade-section">
 
 <h2>DROP 01</h2>
 
@@ -339,7 +381,7 @@ alert("Knowbrand is launching soon. Stay tuned.");
 
 </section>
 
-<section class="section">
+<section class="section fade-section">
 
 <h2>Instagram</h2>
 
@@ -359,7 +401,7 @@ alert("Knowbrand is launching soon. Stay tuned.");
 
 </section>
 
-<section id="about" class="about-contact">
+<section id="about" class="about-contact fade-section">
 
 <h2>About Knowbrand</h2>
 
