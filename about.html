@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,44 +10,216 @@
 
 <style>
 
-body{
+/* GLOBAL */
+
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
 background:black;
 color:white;
-}
-
-nav{
-display:flex;
-justify-content:space-between;
-padding:20px 60px;
-background:black;
-border-bottom:1px solid rgba(255,255,255,0.1);
-}
-
-a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-}
-
-.container{
-max-width:800px;
-margin:120px auto;
-padding:20px;
 line-height:1.6;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
+/* INTRO SCREEN */
+
+#intro-screen{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:3000;
+}
+
+#intro-screen h1{
+font-size:40px;
+letter-spacing:4px;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{opacity:0.3;}
+50%{opacity:1;}
+100%{opacity:0.3;}
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+background:black;
+border-bottom:1px solid rgba(255,255,255,0.1);
+z-index:1000;
+}
+
+.logo{
+font-size:20px;
+font-weight:bold;
+text-decoration:none;
+color:white;
+}
+
+.navlinks a{
+margin-left:30px;
+color:white;
+text-decoration:none;
+font-size:14px;
+}
+
+/* PAGE HERO */
+
+.hero{
+padding:160px 60px 80px;
+max-width:900px;
+}
+
+.hero h1{
+font-size:48px;
+letter-spacing:2px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+opacity:0.8;
+}
+
+/* STORY SECTION */
+
+.story{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+padding:80px 60px;
+align-items:center;
+}
+
+.story img{
+width:100%;
+border-radius:10px;
+object-fit:cover;
+}
+
+.story-text h2{
+font-size:28px;
+margin-bottom:15px;
+}
+
+.story-text p{
+opacity:0.85;
+margin-bottom:15px;
+}
+
+/* MISSION SECTION */
+
+.mission{
+text-align:center;
+padding:100px 60px;
+max-width:800px;
+margin:auto;
+}
+
+.mission h2{
+font-size:28px;
+margin-bottom:20px;
+}
+
+.mission p{
+opacity:0.8;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:40px;
+border-top:1px solid rgba(255,255,255,0.1);
+margin-top:80px;
+}
+
+footer p{
+opacity:0.7;
+font-size:14px;
+margin:5px 0;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav{
+padding:15px 20px;
+}
+
+.hero{
+padding:140px 20px 60px;
+}
+
+.hero h1{
+font-size:36px;
+}
+
+.story{
+grid-template-columns:1fr;
+padding:60px 20px;
+gap:40px;
+}
+
+.mission{
+padding:60px 20px;
+}
+
+}
+
 </style>
+
+<script>
+
+/* INTRO SCREEN */
+
+window.addEventListener("load",function(){
+
+setTimeout(function(){
+document.getElementById("intro-screen").style.display="none";
+},3000);
+
+});
+
+</script>
+
 </head>
 
 <body>
 
+<div id="intro-screen">
+<h1>Knowbrand</h1>
+</div>
+
 <nav>
 
-<div>Knowbrand</div>
+<a href="index.html" class="logo">Knowbrand</a>
 
-<div>
+<div class="navlinks">
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
@@ -54,22 +227,61 @@ line-height:1.6;
 
 </nav>
 
-<div class="container">
+<section class="hero">
 
-<h1>About Knowbrand</h1>
+<h1>Identity Before Trends</h1>
 
 <p>
 Knowbrand is a modern clothing label focused on identity,
-creativity and minimal fashion.
+creativity, and minimal fashion. We design pieces that reflect
+personality rather than chasing trends.
+</p>
+
+</section>
+
+<section class="story">
+
+<img src="https://images.unsplash.com/photo-1520975922203-b7f4c8d3a6f3?q=80&w=1200&auto=format&fit=crop">
+
+<div class="story-text">
+
+<h2>The Story</h2>
+
+<p>
+Knowbrand started with a simple idea — clothing should feel
+personal. Instead of following fast-moving trends, we focus on
+creating pieces that people can connect with.
 </p>
 
 <p>
-Our goal is to create pieces that feel personal rather than
-trend-driven. Each drop represents a small part of the brand's
-evolution.
+Each drop represents a stage of the brand’s growth and
+experimentation. Our collections evolve over time as the
+identity of the brand develops.
 </p>
 
 </div>
+
+</section>
+
+<section class="mission">
+
+<h2>Our Philosophy</h2>
+
+<p>
+Minimal design, strong identity, and timeless pieces.
+Knowbrand aims to build a brand that people wear not just
+for fashion, but for expression.
+</p>
+
+</section>
+
+<footer>
+
+<p>Knowbrand</p>
+<p>Minimal Fashion — Identity First</p>
+<p>© 2026 Knowbrand</p>
+
+</footer>
 
 </body>
 </html>
