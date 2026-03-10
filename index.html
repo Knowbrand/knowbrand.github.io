@@ -17,8 +17,8 @@ scroll-behavior:smooth;
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
-color:white;
 background:black;
+color:white;
 }
 
 /* NAVBAR */
@@ -32,8 +32,8 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 padding:15px 40px;
-box-sizing:border-box;
 z-index:1000;
+box-sizing:border-box;
 }
 
 .logo{
@@ -52,11 +52,6 @@ gap:25px;
 .navlinks a{
 color:white;
 text-decoration:none;
-font-size:16px;
-}
-
-.navlinks a:hover{
-opacity:0.7;
 }
 
 /* HERO */
@@ -64,52 +59,36 @@ opacity:0.7;
 #home{
 height:100vh;
 display:flex;
-flex-direction:column;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:40px;
-box-sizing:border-box;
+padding:20px;
 
 background-image:url("https://images.unsplash.com/photo-1523381294911-8d3cead13475");
 background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
-
-position:relative;
 }
 
-#home::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.55);
+.hero-box{
+background:rgba(255,255,255,0.12);
+padding:30px;
+border-radius:12px;
+backdrop-filter:blur(6px);
 }
-
-#home *{
-position:relative;
-}
-
-/* TEXT */
 
 h1{
+margin:0;
 font-size:48px;
-margin-bottom:10px;
 }
 
 p{
-max-width:600px;
+max-width:500px;
 line-height:1.6;
-font-size:18px;
 }
 
-/* BUTTON */
-
 button{
-margin-top:20px;
+margin-top:15px;
 padding:12px 30px;
 border:none;
 background:white;
@@ -119,21 +98,55 @@ cursor:pointer;
 border-radius:6px;
 }
 
-button:hover{
-opacity:0.85;
-}
-
 /* SECTIONS */
 
 section{
-min-height:100vh;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-text-align:center;
 padding:80px 20px;
+text-align:center;
+}
+
+/* DROP SECTION */
+
+.drop-container{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.product-card{
+width:250px;
 background:#111;
+border-radius:10px;
+overflow:hidden;
+}
+
+.product-card img{
+width:100%;
+display:block;
+}
+
+.product-card p{
+padding:15px;
+margin:0;
+}
+
+/* INSTAGRAM GRID */
+
+.insta-grid{
+margin-top:40px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+max-width:900px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.insta-grid img{
+width:100%;
+display:block;
 }
 
 /* CONTACT */
@@ -147,23 +160,9 @@ font-weight:bold;
 /* FOOTER */
 
 footer{
-background:black;
-padding:30px 20px;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
 text-align:center;
-}
-
-footer p{
-margin:6px 0;
-}
-
-footer a{
-color:white;
-text-decoration:none;
-margin:0 6px;
+padding:30px 20px;
+background:black;
 }
 
 /* MOBILE */
@@ -174,33 +173,28 @@ nav{
 padding:12px 20px;
 }
 
-.logo{
-font-size:16px;
-}
-
 .navlinks{
 gap:15px;
-}
-
-.navlinks a{
-font-size:14px;
-}
-
-#home{
-height:90vh;
 }
 
 h1{
 font-size:32px;
 }
 
-p{
-font-size:15px;
-padding:0 10px;
+#home{
+background:none;
+height:auto;
+padding-top:120px;
+padding-bottom:60px;
 }
 
-button{
-padding:10px 22px;
+.hero-box{
+background:rgba(255,255,255,0.08);
+padding:20px;
+}
+
+.insta-grid{
+grid-template-columns:repeat(2,1fr);
 }
 
 }
@@ -217,13 +211,15 @@ padding:10px 22px;
 
 <div class="navlinks">
 <a href="#home">Home</a>
-<a href="#about">About</a>
+<a href="#drop">Drop</a>
 <a href="#contact">Contact</a>
 </div>
 
 </nav>
 
 <section id="home">
+
+<div class="hero-box">
 
 <h1>Knowbrand</h1>
 
@@ -235,15 +231,53 @@ A modern clothing brand built around identity and creativity.
 Coming Soon
 </button>
 
+</div>
+
 </section>
 
-<section id="about">
+<section id="drop">
 
-<h1>About</h1>
+<h1>DROP 01</h1>
 
-<p>
-Knowbrand is a clothing label focused on simplicity, identity, and bold expression.
-</p>
+<p>First pieces from the Knowbrand collection.</p>
+
+<div class="drop-container">
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+<p>Knowbrand Tee</p>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1">
+<p>Oversized Hoodie</p>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1520975928316-56e61c8f2f1d">
+<p>Street Cap</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="instagram">
+
+<h1>Instagram</h1>
+
+<p>Follow the journey.</p>
+
+<div class="insta-grid">
+
+<img src="https://images.unsplash.com/photo-1520975928316-56e61c8f2f1d">
+<img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1">
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f">
+<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b">
+<img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d">
+
+</div>
 
 </section>
 
@@ -264,7 +298,7 @@ Knowbrand is a clothing label focused on simplicity, identity, and bold expressi
 <p>© 2026 Knowbrand</p>
 
 <p>
-<a href="#about">About</a> |
+<a href="#drop">Drop</a> |
 <a href="#contact">Contact</a>
 </p>
 
