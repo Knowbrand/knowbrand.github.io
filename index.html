@@ -166,16 +166,41 @@ transition:0.4s;
 transform:scale(1.08);
 }
 
+/* PRODUCT NAME + GRADIENT HOVER */
+
 .product-name{
+position:absolute;
+bottom:15px;
+left:0;
+width:100%;
+text-align:center;
+font-size:14px;
+letter-spacing:1px;
+opacity:0;
+z-index:2;
+transition:0.3s;
+}
+
+/* GRADIENT OVERLAY */
+
+.product-card::after{
+content:"";
 position:absolute;
 bottom:0;
 left:0;
 width:100%;
-padding:12px;
-background:rgba(0,0,0,0.65);
-text-align:center;
+height:100%;
+background:linear-gradient(
+to top,
+rgba(0,0,0,0.7),
+rgba(0,0,0,0.0)
+);
 opacity:0;
 transition:0.3s;
+}
+
+.product-card:hover::after{
+opacity:1;
 }
 
 .product-card:hover .product-name{
