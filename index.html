@@ -157,22 +157,33 @@ font-weight:bold;
 margin:0 5px;
 }
 
-footer a:hover{
-opacity:0.7;
-}
-
-/* MOBILE FIX (same layout, smaller sizes) */
+/* MOBILE FIX */
 
 @media (max-width:768px){
 
-nav a{
-margin:0 10px;
-font-size:14px;
+nav{
+justify-content:space-between;
+padding:12px 15px;
 }
 
 .logo{
+position:static;
 font-size:16px;
-left:15px;
+}
+
+nav div{
+display:flex;
+gap:15px;
+}
+
+nav a{
+margin:0;
+font-size:14px;
+}
+
+#home{
+min-height:70vh;
+background-position:center top;
 }
 
 h1{
@@ -181,7 +192,7 @@ font-size:34px;
 
 p{
 font-size:15px;
-padding:0 15px;
+padding:0 10px;
 }
 
 button{
@@ -200,9 +211,11 @@ padding:10px 22px;
 
 <a href="#home" class="logo">KNOWBRAND</a>
 
+<div>
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
+</div>
 
 </nav>
 
