@@ -36,6 +36,7 @@ justify-content:space-between;
 align-items:center;
 padding:18px 60px;
 z-index:1000;
+
 background:rgba(0,0,0,0.6);
 backdrop-filter:blur(10px);
 }
@@ -44,6 +45,8 @@ backdrop-filter:blur(10px);
 font-size:20px;
 font-weight:bold;
 }
+
+/* NAV LINKS */
 
 .navlinks{
 display:flex;
@@ -57,7 +60,7 @@ font-size:14px;
 position:relative;
 }
 
-/* NAVBAR HOVER */
+/* NAVBAR PREMIUM HOVER */
 
 .navlinks a::after{
 content:"";
@@ -82,10 +85,11 @@ height:90vh;
 
 background:
 linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.55)),
-url("https://images.unsplash.com/photo-1520975922284-9bfb8b9f7d19");
+url("https://https://images.unsplash.com/photo-1523381294911-8d3cead13475");
 
 background-size:cover;
 background-position:center;
+background-attachment:fixed;
 
 display:flex;
 align-items:center;
@@ -93,7 +97,10 @@ justify-content:center;
 text-align:center;
 
 padding:20px;
+
 }
+
+/* HERO BOX */
 
 .hero-box{
 background:rgba(255,255,255,0.08);
@@ -189,8 +196,6 @@ transition:0.5s;
 cursor:pointer;
 }
 
-/* INSTAGRAM HOVER ZOOM */
-
 .insta-grid img:hover{
 transform:scale(1.08);
 }
@@ -219,7 +224,7 @@ text-align:center;
 border-top:1px solid rgba(255,255,255,0.1);
 }
 
-/* SCROLL ANIMATION */
+/* SCROLL FADE */
 
 .fade-section{
 opacity:0;
@@ -263,12 +268,14 @@ url("https://i.pinimg.com/736x/46/52/65/46526532b6bf8d69041729adab9efcb7.jpg");
 
 background-size:cover;
 background-position:center;
+background-attachment:scroll;
 
 display:flex;
 align-items:center;
 justify-content:center;
 
 padding:20px;
+
 }
 
 /* DROP MOBILE */
@@ -298,15 +305,15 @@ padding:60px 20px;
 
 <script>
 
-/* COMING SOON BUTTON */
+/* COMING SOON */
 
 function comingSoon(){
 alert("Knowbrand is launching soon. Stay tuned.");
 }
 
-/* SCROLL FADE ANIMATION */
+/* SCROLL FADE */
 
-window.addEventListener("scroll", function(){
+window.addEventListener("scroll",function(){
 
 const sections=document.querySelectorAll(".fade-section");
 
@@ -406,7 +413,8 @@ section.classList.add("visible");
 <h2>About Knowbrand</h2>
 
 <p>
-Knowbrand is a modern clothing label focused on identity, creativity and minimal fashion.
+Knowbrand is a modern clothing label focused on identity,
+creativity and minimal fashion.
 We design pieces that reflect personality rather than trends.
 </p>
 
