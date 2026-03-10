@@ -83,8 +83,9 @@ font-size:48px;
 }
 
 p{
-max-width:500px;
+max-width:600px;
 line-height:1.6;
+margin:auto;
 }
 
 button{
@@ -111,30 +112,30 @@ text-align:center;
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:25px;
-max-width:1100px;
+max-width:1200px;
 margin:auto;
 margin-top:40px;
 }
 
 .product-card{
 background:#111;
-border-radius:10px;
+border-radius:12px;
 overflow:hidden;
-transition:0.3s;
 }
 
-.product-card:hover{
-transform:translateY(-6px);
-}
+/* IMAGE FIX */
 
 .product-card img{
 width:100%;
+height:320px;
+object-fit:cover;
 display:block;
 }
 
 .product-card p{
 padding:15px;
 margin:0;
+font-size:18px;
 }
 
 /* INSTAGRAM GRID */
@@ -151,7 +152,8 @@ margin-right:auto;
 
 .insta-grid img{
 width:100%;
-display:block;
+height:250px;
+object-fit:cover;
 }
 
 /* CONTACT */
@@ -212,7 +214,9 @@ max-width:400px;
 margin:auto;
 }
 
-/* instagram grid */
+.product-card img{
+height:300px;
+}
 
 .insta-grid{
 grid-template-columns:repeat(2,1fr);
@@ -232,6 +236,7 @@ grid-template-columns:repeat(2,1fr);
 
 <div class="navlinks">
 <a href="#home">Home</a>
+<a href="#about">About</a>
 <a href="#drop">Drop</a>
 <a href="#contact">Contact</a>
 </div>
@@ -248,11 +253,22 @@ grid-template-columns:repeat(2,1fr);
 A modern clothing brand built around identity and creativity.
 </p>
 
-<button onclick="alert('Knowbrand dropping soon 🚀')">
+<button>
 Coming Soon
 </button>
 
 </div>
+
+</section>
+
+<section id="about">
+
+<h1>About</h1>
+
+<p>
+Knowbrand is a modern clothing label focused on individuality and creative identity.  
+Built for people who want their clothing to express more than just fashion.
+</p>
 
 </section>
 
@@ -288,25 +304,6 @@ Coming Soon
 
 </section>
 
-<section id="instagram">
-
-<h1>Instagram</h1>
-
-<p>Follow the journey.</p>
-
-<div class="insta-grid">
-
-<img src="https://i.pinimg.com/736x/5f/9b/4c/5f9b4c3f43a2e2449c0923ff1ec8d976.jpg">
-<img src="https://i.pinimg.com/736x/b4/60/08/b46008f02b6a9dbf4229d0fe37a7a9d4.jpg">
-<img src="https://i.pinimg.com/736x/73/f3/64/73f36452629444a51debe000c986426a.jpg">
-<img src="https://i.pinimg.com/1200x/cc/99/82/cc9982fcc5bd20b2a30a488482a2c659.jpg">
-<img src="https://i.pinimg.com/736x/b4/60/08/b46008f02b6a9dbf4229d0fe37a7a9d4.jpg">
-<img src="https://i.pinimg.com/736x/73/f3/64/73f36452629444a51debe000c986426a.jpg">
-
-</div>
-
-</section>
-
 <section id="contact">
 
 <h1>Contact</h1>
@@ -324,6 +321,7 @@ Coming Soon
 <p>© 2026 Knowbrand</p>
 
 <p>
+<a href="#about">About</a> |
 <a href="#drop">Drop</a> |
 <a href="#contact">Contact</a>
 </p>
